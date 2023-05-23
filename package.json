@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/VictorMello1993/solid-apoc#readme",
   "devDependencies": {
+    "@prisma/client": "4.14.1",
     "@types/node": "^20.1.4",
     "eslint": "8.40.0",
     "eslint-config-standard": "17.0.0",
+    "prisma": "4.14.1",
     "tsup": "^6.7.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
