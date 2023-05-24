@@ -7,6 +7,7 @@
     "quotes": [2, "double", {"avoidEscape": true}],
     "semi": [2, "always"],
     "space-before-function-paren": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "no-useless-constructor": "off"
   }
 }
