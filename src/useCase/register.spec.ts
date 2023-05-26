@@ -31,7 +31,7 @@ describe("Register use case", () => {
     expect(isPasswordCorrectlyHashed).toBe(true);
   });
 
-  it.skip("It should not be able to regiter with the same e-mail twice", async () => {
+  it.skip("It should not be able to register with the same e-mail twice", async () => {
     const email = "user1@teste.com.br";
 
     await registerUseCase.execute({
