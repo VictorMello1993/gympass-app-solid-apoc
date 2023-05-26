@@ -20,9 +20,9 @@ export async function register(req: FastifyRequest, res: FastifyReply) {
     await registerUseCase.execute({ name, email, password });
   } catch (error) {
     if (error instanceof UserAlreadyExistsError) {
-      return res.status(409).send(error.message);
+      return res.status(409).send({ message: error.message });
     }
-  }
 
-  return res.status(500).send();
+    throw error;
+  }
 };
