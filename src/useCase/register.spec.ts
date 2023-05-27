@@ -1,16 +1,20 @@
-import { expect, it, describe } from "vitest";
+import { expect, it, describe, beforeEach } from "vitest";
 import { RegisterUseCase } from "./register";
 import { compare } from "bcryptjs";
 import { InMemoryUsersRepository } from "../repositories/InMemory/InMemoryUsersRepository";
 import { UserAlreadyExistsError } from "./errors/UserAlreadyExists";
 
+let inMemoryUsersRepository: InMemoryUsersRepository;
+let sut: RegisterUseCase;
+
 describe("Register use case", () => {
-  // TESTE UNITÁRIO - AO INSTANCIAR USE CASE, É PRECISO MOCKAR O REPOSITORY, PARA NÃO DEPENDER DE DEPENDÊNCIAS EXTERNAS
-  const inMemoryUsersRepository = new InMemoryUsersRepository();
-  const registerUseCase = new RegisterUseCase(inMemoryUsersRepository);
+  beforeEach(() => {
+    inMemoryUsersRepository = new InMemoryUsersRepository();
+    sut = new RegisterUseCase(inMemoryUsersRepository);
+  });
 
   it("It should be able to register", async () => {
-    const { user } = await registerUseCase.execute({
+    const { user } = await sut.execute({
       name: "fulano",
       email: "fulano1@teste.com.br",
       password: "123456"
@@ -20,7 +24,7 @@ describe("Register use case", () => {
   });
 
   it("It should be able to generate hash user password correctely", async () => {
-    const { user } = await registerUseCase.execute({
+    const { user } = await sut.execute({
       name: "Victor",
       email: "victor1@teste.com.br",
       password: "123456"
@@ -34,13 +38,13 @@ describe("Register use case", () => {
   it.skip("It should not be able to register with the same e-mail twice", async () => {
     const email = "user1@teste.com.br";
 
-    await registerUseCase.execute({
+    await sut.execute({
       name: "Victor",
       email,
       password: "123456"
     });
 
-    await expect(() => registerUseCase.execute({
+    await expect(() => sut.execute({
       name: "Victor",
       email,
       password: "123456"
