@@ -1,6 +1,6 @@
 import { hash } from "bcryptjs";
 import { IUsersRepository } from "../repositories/IUsersRepository";
-import { UserAlreadyExistsError } from "./errors/UserAlreadyExists";
+import { UserAlreadyExistsError } from "./errors/UserAlreadyExistsError";
 
 interface RegisterUseCaseRequest{
   name: string
