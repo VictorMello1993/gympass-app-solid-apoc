@@ -35,6 +35,7 @@ describe("Fetch user check-in history use case", () => {
   });
 
   it("It should be able to fetch paginated user check-in history", async () => {
+    // Registrando 22 check-ins de academia por usuário logado
     for (let i = 1; i <= 22; i++) {
       await checkInsRepository.create({
         gym_id: `gym-${i}`,
@@ -47,6 +48,8 @@ describe("Fetch user check-in history use case", () => {
       page: 2
     });
 
+    /* Como o requisito é buscar 20 items por página e foram realizados 22 check-ins de academia,
+       então na segunda página só existem 2 check-ins restantes */
     expect(checkIns).toHaveLength(2);
     expect(checkIns).toEqual([
       expect.objectContaining({ gym_id: "gym-21" }),
