@@ -56,10 +56,10 @@ describe("Validate check-in use case", () => {
 
     vi.advanceTimersByTime(TwentyOneMinutesInMs); // 01/01/2023 14:01 - 17:01 em UTC
 
-    await expect(() => {
+    await expect(() =>
       sut.execute({
         checkInId: createdCheckIn.id
-      });
-    }).rejects.toBeInstanceOf(LateCheckInValidationError);
+      })
+    ).rejects.toBeInstanceOf(LateCheckInValidationError);
   });
 });
