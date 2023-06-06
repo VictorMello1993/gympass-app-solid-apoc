@@ -25,3 +25,6 @@
  * [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
  * [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
  * [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+
+**Endpoints para importar**
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Dev%20Gyms%20-%20Ignite%202023%20-%20Rocketseat&uri=https%3A%2F%2Fgist.github.com%2FVictorMello1993%2Fe3eb96983aea4b7ed09e503ed635e458)
