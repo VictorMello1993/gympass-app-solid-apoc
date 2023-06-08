@@ -29,3 +29,4 @@
 **Endpoints para importar**
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Dev%20Gyms%20-%20Ignite%202023%20-%20Node.js&uri=https%3A%2F%2Fgist.github.com%2FVictorMello1993%2F1fd1b5b1e94a9f9bb1e5b34aedc666fa)
+
