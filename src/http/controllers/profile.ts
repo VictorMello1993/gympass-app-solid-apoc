@@ -1,17 +1,17 @@
 import { FastifyReply, FastifyRequest } from "fastify";
+import { makeGetUserProfile } from "../../useCase/factories/makeGetUserProfile";
 
 export async function profile(req: FastifyRequest, res: FastifyReply) {
-  try {
-    const registerUseCase = makeRegisterUseCase();
+  const getUserProfile = makeGetUserProfile();
 
-    await registerUseCase.execute({ name, email, password });
-  } catch (error) {
-    if (error instanceof UserAlreadyExistsError) {
-      return res.status(409).send({ message: error.message });
+  const { user } = await getUserProfile.execute({
+    userId: req.user.sub
+  });
+
+  return res.status(200).send({
+    user: {
+      ...user,
+      password_hash: undefined
     }
-
-    throw error;
-  }
-
-  return res.status(200).send();
+  });
 };
