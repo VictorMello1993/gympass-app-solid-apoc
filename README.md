@@ -28,4 +28,5 @@
 
 **Endpoints para importar**
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Dev%20Gyms%20-%20Ignite%20Node.js%20-%20Rocketseat&uri=https%3A%2F%2Fgist.githubusercontent.com%2FVictorMello1993%2F47a9cdc6dd46b3601c27db207b8f2419%2Fraw%2Fa9026d7a0fd51a7739fc58d972d131facb39c665%2FInsomnia_2023-06-06.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Dev%20Gyms%20-%20Ignite%202023%20Node.js%20-%20Rocketseat&uri=https%3A%2F%2Fgist.githubusercontent.com%2FVictorMello1993%2F1fd1b5b1e94a9f9bb1e5b34aedc666fa%2Fraw%2F1de4f2afb943f2d13a0b17a5e13b93e78fdc303a%2FInsomnia_2023-06-07.json)
+
