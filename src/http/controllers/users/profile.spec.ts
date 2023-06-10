@@ -1,6 +1,7 @@
 import { describe, afterAll, beforeAll, it, expect } from "vitest";
-import { app } from "../../app";
 import request from "supertest";
+import { app } from "@/app";
+;
 
 describe("Profile (e2e)", () => {
   beforeAll(async () => {
