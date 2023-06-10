@@ -1,5 +1,5 @@
 import { describe, afterAll, beforeAll, it, expect } from "vitest";
-import { app } from "../../app";
+import { app } from "@/app";
 import request from "supertest";
 
 describe("Register (e2e)", () => {

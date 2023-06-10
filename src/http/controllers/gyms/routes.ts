@@ -7,7 +7,7 @@ import { create } from "./create";
 export async function gymsRoutes(app: FastifyInstance) {
   app.addHook("onRequest", jwtVerify);
 
-  app.post("gyms", create);
+  app.post("/gyms", create);
   app.get("/gyms/search", search);
   app.get("/gyms/nearby", nearby);
 }
