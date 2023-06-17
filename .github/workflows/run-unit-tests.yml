@@ -1,0 +1,33 @@
+name: Run Unit Tests
+
+# on - Quando executar esse workflow - quando executar Git Push
+on: [push]
+
+# Quais ações que devem ser executadas nesse workflow?
+jobs:
+  run-unit-tests: 
+    name: Run Unit Tests
+
+    # Roda numa máquina virtual Ubuntu
+    runs-on: ubuntu-latest 
+
+    # Passos que um job deve executar
+    steps:
+      # Baixa o código
+      - uses: actions/checkout@v3 
+
+      # instala o Node.js versão 18.x.x e escolhendo o gerenciador de pacotes (npm, yarn, etc...) para
+      # instala as dependências e criar um cache, para que na próxima vez que executar esse workflow,
+      # não será necessário ter que instalar as dependências tudo novamente, aproveitando o cache
+      # que tinha anteriormente
+      - uses: actions/setup-node@v3
+        with:
+          node-vesion: 18
+          cache: 'npm'
+
+      # Roda um comando no terminal
+      # Instalando as dependências (npm ci)
+      - run: npm ci
+
+      # Executando testes unitários
+      - run: npm run test:unit
