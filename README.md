@@ -17,16 +17,17 @@
  * [x] O usuário não pode fazer 2 check-ins no mesmo dia;
  * [x] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
  * [x] O check-in só pode ser validada até 20 minutos após ser criado;
- * [ ] O check-in só pode ser validado por administradores;
- * [ ] A academia só pode ser cadastrada por administradores;
+ * [x] O check-in só pode ser validado por administradores;
+ * [x] A academia só pode ser cadastrada por administradores;
 
 **RNFs (Requisitos não-funcionais)**
  * [x] A senha do usuário precisa estar criptografada;
  * [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
  * [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
- * [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+ * [x] O usuário deve ser identificado por um JWT (JSON Web Token);
 
 **Endpoints para importar**
 
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Dev%20Gyms%20-%20Ignite%202023%20Node.js%20-%20Rocketseat&uri=https%3A%2F%2Fgist.githubusercontent.com%2FVictorMello1993%2F1fd1b5b1e94a9f9bb1e5b34aedc666fa%2Fraw%2F1de4f2afb943f2d13a0b17a5e13b93e78fdc303a%2FInsomnia_2023-06-07.json)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=&uri=https%3A%2F%2Fgist.githubusercontent.com%2FVictorMello1993%2F9605a64473fa6ab822807aa847313936%2Fraw%2F01413aabfbd0cd299f06c51bf26132ebe7c0449e%2Fgistfile1.txt)
+
 
